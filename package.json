@@ -2,22 +2,15 @@
   "name": "fabric-efa",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
-  },
   "scripts": {
-    "test": "react-scripts test",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"src/**/*\""
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "lint": "eslint --ext .ts \"src/**/*\"",
+    "format": "prettier --write \"src/**/*\"",
+    "typecheck": "tsc --noEmit -p . --pretty",
+    "check": "npm run lint && npm run typecheck",
+    "lint:fix": "eslint --fix --ext .ts \"src/**/*\""
   },
   "eslintConfig": {
     "extends": [
@@ -42,12 +35,33 @@
       "pre-commit": "pretty-quick"
     }
   },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.1.2",
+    "web-vitals": "^1.0.1"
+  },
   "devDependencies": {
+    "@babel/core": "^7.14.6",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.27.0",
+    "customize-cra": "^1.0.0",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.1",
-    "pretty-quick": "^3.1.1"
+    "pretty-quick": "^3.1.1",
+    "react-app-rewire-alias": "^1.0.3",
+    "react-app-rewired": "^2.1.8"
   }
 }

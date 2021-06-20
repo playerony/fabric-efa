@@ -1,0 +1,80 @@
+{
+  "extends": [
+    "airbnb-typescript"
+  ],
+  "ignorePatterns": [
+    "/*.*"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": [
+      "./tsconfig.json"
+    ]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "plugins": [
+    "react-hooks"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.tsx",
+        "*.ts",
+        "*.js"
+      ],
+      "rules": {
+        "eqeqeq": "off",
+        "no-console": "off",
+        "no-prototype-builtins": "off",
+        "react/jsx-uses-react": "off",
+        "react/react-in-jsx-scope": "off",
+        "import/prefer-default-export": "off",
+        "import/order": "off",
+        "implicit-arrow-linebreak": "off",
+        "function-paren-newline": "off",
+        "consistent-return": "off",
+        "object-curly-newline": "off",
+        "operator-linebreak": "off",
+        "no-restricted-syntax": "off",
+        "class-methods-use-this": "off",
+        "import/no-cycle": "off",
+        "@typescript-eslint/indent": "off",
+        "@typescript-eslint/comma-dangle": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "no-confusing-arrow": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "react/no-this-in-sfc": "off",
+        "func-names": "off",
+        "no-underscore-dangle": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "import/no-extraneous-dependencies": "off",
+        "newline-per-chained-call": "off",
+        "react/jsx-curly-newline": [
+          "error",
+          {
+            "multiline": "consistent",
+            "singleline": "consistent"
+          }
+        ],
+        "react/jsx-wrap-multilines": [
+          "error",
+          {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "parens-new-line",
+            "logical": "parens-new-line",
+            "prop": "ignore"
+          }
+        ]
+      }
+    }
+  ]
+}
