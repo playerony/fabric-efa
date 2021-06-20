@@ -1,0 +1,6 @@
+*.mdx
+*.svg
+*.css
+*.json
+*.ts.snap
+/storybook-static
