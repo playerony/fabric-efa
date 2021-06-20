@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "test": "NODE_ENV=test jest",
     "eject": "react-scripts eject",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "lint": "eslint --ext .ts \"src/**/*\"",
     "format": "prettier --write \"src/**/*\"",
     "typecheck": "tsc --noEmit -p . --pretty",
-    "check": "npm run lint && npm run typecheck",
-    "lint:fix": "eslint --fix --ext .ts \"src/**/*\""
+    "test:watch": "NODE_ENV=test jest --watch",
+    "test:coverage": "NODE_ENV=test jest --coverage",
+    "lint:fix": "eslint --fix --ext .ts \"src/**/*\"",
+    "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
+    "test:ci": "NODE_ENV=test jest --ci --coverage --forceExit",
+    "check": "npm run lint && npm run typecheck && npm run test"
   },
   "eslintConfig": {
     "extends": [
@@ -39,15 +44,18 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "jest": "^27.0.4",
+    "jest-module-name-mapper": "^0.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^26.0.23",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
@@ -59,6 +67,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jsdom": "^16.6.0",
     "prettier": "^2.3.1",
     "pretty-quick": "^3.1.1",
     "react-app-rewire-alias": "^1.0.3",
