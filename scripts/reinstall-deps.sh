@@ -1,4 +1,4 @@
-rm -r node_modules
+rm -rfv node_modules
 rm package-lock.json
 
 npm cache clean --force
