@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@application/*": [
+        "./src/application/*"
+      ],
+      "@application": [
+        "./src/application"
+      ],
+      "@ui/*": [
+        "./src/ui/*"
+      ],
+      "@ui": [
+        "./src/ui"
+      ],
+      "@domain/*": [
+        "./src/domain/*"
+      ],
+      "@domain": [
+        "./src/domain"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@utils": [
+        "./src/utils"
+      ],
+      "@infrastructure/*": [
+        "./src/infrastructure/*"
+      ],
+      "@infrastructure": [
+        "./src/infrastructure"
+      ]
+    }
+  }
+}
