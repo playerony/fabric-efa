@@ -1,3 +1,7 @@
-export function App(): JSX.Element {
-  return <h1>App</h1>;
-}
+import { AppProvider } from '../context';
+
+export const App = (): JSX.Element => (
+  <AppProvider>
+    <h1>Content</h1>
+  </AppProvider>
+);

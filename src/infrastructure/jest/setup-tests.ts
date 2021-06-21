@@ -1,3 +1,3 @@
 import '@testing-library/jest-dom';
 
-import './match-media.mock';
+import './mocks/match-media.mock';
