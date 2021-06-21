@@ -15,7 +15,9 @@
     "lint:fix": "eslint --fix --ext .ts \"src/**/*\"",
     "reinstall-deps": "bash ./scripts/reinstall-deps.sh",
     "test:ci": "NODE_ENV=test jest --ci --coverage --forceExit",
-    "check": "npm run lint && npm run typecheck && npm run test"
+    "check": "npm run lint && npm run typecheck && npm run test",
+    "docker-run": "docker run --rm --publish 3000:3000 fabric-efa",
+    "docker-build": "docker build -f Dockerfile --tag fabric-efa ."
   },
   "eslintConfig": {
     "extends": [

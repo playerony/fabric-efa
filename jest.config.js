@@ -12,6 +12,6 @@ module.exports = {
   moduleNameMapper: mapPathsFromTsConfig(),
   modulePathIgnorePatterns: ['node_modules'],
   transform: { '^.+\\.(ts|tsx)$': 'ts-jest' },
-  setupFilesAfterEnv: ['<rootDir>/src/infrastructure/tests/setup-tests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/src/infrastructure/jest/setup-tests.ts'],
   testMatch: ['**/__tests__/**/*.+(ts|tsx|js)', '**/?(*.)+(spec|test).+(ts|tsx|js)'],
 };
