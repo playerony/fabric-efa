@@ -3,9 +3,9 @@ const { alias, configPaths } = require('react-app-rewire-alias');
 
 module.exports = override(
   fixBabelImports('import', {
-    style: 'css',
     libraryName: 'antd',
     libraryDirectory: 'es',
+    style: true,
   }),
   alias(configPaths('./tsconfig.paths.json')),
 );

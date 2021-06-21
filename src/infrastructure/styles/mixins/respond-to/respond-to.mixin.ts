@@ -1,7 +1,7 @@
 import { css } from 'styled-components';
 
-import { deviceBreakpoint } from '../..';
-import { MediaFor, CSSParams } from './respond-to.type';
+import { deviceBreakpoint } from '../../variables';
+import { MediaFor, CSSParams } from './respond-to.types';
 
 const keys = Object.keys(deviceBreakpoint) as Array<keyof typeof deviceBreakpoint>;
 
