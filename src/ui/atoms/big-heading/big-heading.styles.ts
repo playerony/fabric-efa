@@ -1,20 +1,13 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
-import { StyledBigHeadingProps } from './big-heading.types';
 import { typeScale, fontWeight, respondToMax } from '@infrastructure';
 
-const StyledBigHeading = styled.h1<StyledBigHeadingProps>`
+const StyledBigHeading = styled.h1`
   margin: 0;
   padding: 0;
   line-height: 1.1;
   font-size: ${typeScale.h1};
   font-weight: ${fontWeight.bold};
-
-  ${({ pointer }) =>
-    pointer &&
-    css`
-      cursor: pointer;
-    `}
 
   ${respondToMax.xmobile`
     font-size: ${typeScale.h3};
