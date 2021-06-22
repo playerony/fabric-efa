@@ -4,7 +4,7 @@ import {
   MEDIUM_SCREEN_BREAKPOINT,
   MOBILE_SCREEN_BREAKPOINT,
   XMOBILE_SCREEN_BREAKPOINT,
-} from '@infrastructure';
+} from '../../constants';
 
 export type DeviceBreakpoint = 'large' | 'medium' | 'small' | 'mobile' | 'xmobile';
 
