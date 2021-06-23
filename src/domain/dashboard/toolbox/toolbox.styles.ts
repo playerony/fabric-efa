@@ -4,7 +4,7 @@ import { cover, padding } from 'polished';
 import { BigHeading } from '@ui';
 import { spacing, CANVAS_WIDTH_SCALE } from '@infrastructure';
 
-const tooltipWidth = 100 * (1 - CANVAS_WIDTH_SCALE);
+const toolboxWidth = 100 * (1 - CANVAS_WIDTH_SCALE);
 
 const StyledWrapper = styled.div`
   ${cover()}
@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   left: unset;
   position: fixed;
   box-sizing: border-box;
-  width: ${tooltipWidth}%;
+  width: ${toolboxWidth}%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: ${({ theme }) => theme.color.secondaryBackground};
 `;

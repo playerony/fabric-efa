@@ -1,11 +1,11 @@
 import { ToolboxProps } from './toolbox.types';
 
-import S from './toolbox.styles';
 import { Button } from '@ui';
+import S from './toolbox.styles';
 
 import { callEditorFunction } from './utils';
 
-export const Toolbox = ({ fabricJSEditor }: ToolboxProps): JSX.Element | null => {
+export const Toolbox = ({ fabricJSEditor }: ToolboxProps): JSX.Element => {
   const addCircle = () => callEditorFunction(fabricJSEditor, 'addCircle');
 
   const deleteAll = () => callEditorFunction(fabricJSEditor, 'deleteAll');

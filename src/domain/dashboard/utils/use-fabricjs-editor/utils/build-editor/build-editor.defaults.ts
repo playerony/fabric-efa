@@ -4,8 +4,8 @@ export const DEFAULT_SIZE = 200;
 export const DEFAULT_FILL_COLOR = yellow[100];
 
 const defaultShapeProps = {
-  top: 200,
-  left: 200,
+  top: DEFAULT_SIZE,
+  left: DEFAULT_SIZE,
   fill: DEFAULT_FILL_COLOR,
 };
 
