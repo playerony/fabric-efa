@@ -16,7 +16,6 @@ export function bindEvents(canvas: fabric.Canvas) {
     }
 
     const { id, top, left } = e.target;
-
     const buttonElement = createButton(id);
 
     buttonElement.style.top = `${top - buttonHeight / 2}px`;
@@ -37,7 +36,6 @@ export function bindEvents(canvas: fabric.Canvas) {
     }
 
     const { id } = e.target;
-
     const foundButton = document.getElementById(id);
 
     if (foundButton) {
