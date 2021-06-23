@@ -1,3 +1,4 @@
+import 'fabric';
 import 'styled-components';
 import { defaultTheme } from '@infrastructure';
 

@@ -1,12 +1,12 @@
 import { fabric } from 'fabric';
-import { useState, ReactNode } from 'react';
+import { useState, useEffect, ReactNode } from 'react';
 
 import { Canvas } from './canvas/canvas.component';
 import { Toolbox } from './toolbox/toolbox.component';
 import { LoadingPage } from './loading-page/loading-page.component';
 
-import { useFabricJsEditor } from './utils';
-import { CANVAS_WIDTH_SCALE } from '@infrastructure';
+import { bindEvents, useFabricJsEditor } from './utils';
+import { CANVAS_WIDTH_SCALE, CANVAS_BUTTONS_CONTAINER_ID } from '@infrastructure';
 import { getWindowWidth, getWindowHeight, useDebounce, useEventListener } from '@utils';
 
 export const Dashboard = (): JSX.Element => {
@@ -14,6 +14,12 @@ export const Dashboard = (): JSX.Element => {
 
   const isLoading = useDebounce(!canvas, 1000);
   const fabricJSEditor = useFabricJsEditor(canvas);
+
+  useEffect(() => {
+    if (canvas) {
+      bindEvents(canvas);
+    }
+  }, [canvas]);
 
   useEventListener('resize', () => {
     if (!canvas) {
@@ -39,6 +45,7 @@ export const Dashboard = (): JSX.Element => {
     <>
       <Canvas setCanvas={setCanvas} />
       {renderContent()}
+      <div id={CANVAS_BUTTONS_CONTAINER_ID} />
     </>
   );
 };

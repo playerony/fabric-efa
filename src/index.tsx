@@ -4,6 +4,8 @@ import { StrictMode } from 'react';
 import { App } from '@application';
 import reportWebVitals from './reportWebVitals';
 
+import '@infrastructure/fabricjs/fabricjs.config';
+
 ReactDOM.render(
   <StrictMode>
     <App />
