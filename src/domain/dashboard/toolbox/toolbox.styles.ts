@@ -2,16 +2,18 @@ import styled from 'styled-components';
 import { cover, padding } from 'polished';
 
 import { BigHeading } from '@ui';
-import { spacing } from '@infrastructure';
+import { spacing, CANVAS_WIDTH_SCALE } from '@infrastructure';
+
+const tooltipWidth = 100 * (1 - CANVAS_WIDTH_SCALE);
 
 const StyledWrapper = styled.div`
   ${cover()}
   ${padding(spacing.medium)}
 
-  width: 30%;
   left: unset;
   position: fixed;
   box-sizing: border-box;
+  width: ${tooltipWidth}%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: ${({ theme }) => theme.color.secondaryBackground};
 `;
