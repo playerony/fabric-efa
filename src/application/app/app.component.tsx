@@ -1,8 +1,11 @@
 import { AppProvider } from '../context';
 import { DashboardPage } from '../pages';
+import { PrimaryBackground } from '../layout';
 
 export const App = (): JSX.Element => (
   <AppProvider>
-    <DashboardPage />
+    <PrimaryBackground>
+      <DashboardPage />
+    </PrimaryBackground>
   </AppProvider>
 );
