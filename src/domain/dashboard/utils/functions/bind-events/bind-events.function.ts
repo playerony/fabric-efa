@@ -52,4 +52,9 @@ export function bindEvents(canvas: fabric.Canvas) {
     'object:scaling',
     setButtonPosition({ canvasButtonsContainer, buttonWidth, buttonHeight }),
   );
+
+  canvas.on(
+    'object:rotating',
+    setButtonPosition({ canvasButtonsContainer, buttonWidth, buttonHeight }),
+  );
 }
