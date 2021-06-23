@@ -1,9 +1,11 @@
 import { useRef, useEffect } from 'react';
 
+import S from './canvas.styles';
+
 import { createCanvas } from './utils';
 import { CanvasProps } from './canvas.types';
 
-export function Canvas({ children, setCanvas }: CanvasProps): JSX.Element {
+export const Canvas = ({ setCanvas }: CanvasProps): JSX.Element => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -14,10 +16,5 @@ export function Canvas({ children, setCanvas }: CanvasProps): JSX.Element {
     }
   }, [setCanvas]);
 
-  return (
-    <>
-      <canvas ref={canvasRef} />
-      {children}
-    </>
-  );
-}
+  return <S.StyledCanvas ref={canvasRef} />;
+};

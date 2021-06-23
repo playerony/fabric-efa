@@ -1,0 +1,35 @@
+import { boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { Button } from '@ui';
+
+<Meta title="Design System/atoms/Button" component={Button} />
+
+# Button
+
+Button is used to trigger an operation.
+
+<Preview withToolbar>
+  <Story name="default">
+    <Button onClick={action('button-click')} disabled={boolean('Disabled', false)}>
+      Button
+    </Button>
+  </Story>
+</Preview>
+
+# Error Button
+
+Error Button is used to inform the user about a remove operation that will be a trigger.
+
+<Preview withToolbar>
+  <Story name="error button">
+    <Button
+      modifiers={['error']}
+      onClick={action('button-click')}
+      disabled={boolean('Disabled', false)}
+    >
+      Remove
+    </Button>
+  </Story>
+</Preview>
