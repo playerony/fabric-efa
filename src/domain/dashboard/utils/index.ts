@@ -1,1 +1,2 @@
-export * from './use-fabricjs-editor/use-fabricjs-editor.hook';
+export * from './hooks';
+export * from './functions';

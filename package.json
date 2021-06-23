@@ -103,6 +103,7 @@
     "pretty-quick": "^3.1.1",
     "react-app-rewire-alias": "^1.0.3",
     "react-app-rewired": "^2.1.8",
-    "styled-components-modifiers": "^1.2.5"
+    "styled-components-modifiers": "^1.2.5",
+    "uuidv4": "^6.2.10"
   }
 }

@@ -1,10 +1,12 @@
+import { uuid } from 'uuidv4';
 import { fabric } from 'fabric';
 
-import { EditorOptions } from '../../../../types';
+import { EditorOptions } from '../../../../../types';
 import { CIRCLE, RECTANGLE, TRIANGLE } from './build-editor.defaults';
 
-fabric.Object.prototype.originX = 'center';
-fabric.Object.prototype.originY = 'center';
+import { getRandomColor } from '@utils';
+
+const generateUniqueId = (prefix: string): string => `${prefix}_${uuid()}`;
 
 export function buildEditor(canvas: fabric.Canvas | null): EditorOptions | null {
   if (!canvas) {
@@ -16,29 +18,44 @@ export function buildEditor(canvas: fabric.Canvas | null): EditorOptions | null 
 
   return {
     addCircle: () => {
+      const fill = getRandomColor();
+      const id = generateUniqueId('circle');
+
       const object = new fabric.Circle({
         ...CIRCLE,
+        id,
+        fill,
         top: canvasHeight / 2,
         left: canvasWidth / 2,
-      });
+      } as any);
 
       canvas.add(object);
     },
     addRectangle: () => {
+      const fill = getRandomColor();
+      const id = generateUniqueId('rectangle');
+
       const object = new fabric.Rect({
         ...RECTANGLE,
+        id,
+        fill,
         top: canvasHeight / 2,
         left: canvasWidth / 2,
-      });
+      } as any);
 
       canvas.add(object);
     },
     addTriangle: () => {
+      const fill = getRandomColor();
+      const id = generateUniqueId('triangle');
+
       const object = new fabric.Triangle({
         ...TRIANGLE,
+        id,
+        fill,
         top: canvasHeight / 2,
         left: canvasWidth / 2,
-      });
+      } as any);
 
       canvas.add(object);
     },

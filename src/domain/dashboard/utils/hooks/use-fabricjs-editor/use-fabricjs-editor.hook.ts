@@ -1,7 +1,7 @@
 import { fabric } from 'fabric';
 import { useState, useEffect } from 'react';
 
-import { FabricJSEditor } from '../../types';
+import { FabricJSEditor } from '../../../types';
 
 import { bindEvents, buildEditor } from './utils';
 
