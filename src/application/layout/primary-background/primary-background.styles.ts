@@ -1,8 +1,9 @@
+import { size } from 'polished';
 import styled from 'styled-components';
 
 const StyledPrimaryBackground = styled.div`
-  width: 100vw;
-  height: 100vh;
+  ${size('100vh', '100vw')}
+
   display: flex;
   overflow-y: scroll;
   flex-direction: column;

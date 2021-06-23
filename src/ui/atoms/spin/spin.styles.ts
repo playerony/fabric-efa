@@ -5,7 +5,6 @@ const StyledWrapper = styled.div`
   ${size(40, 40)}
 
   display: flex;
-  position: static;
   align-items: center;
 `;
 
