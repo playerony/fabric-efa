@@ -1,5 +1,5 @@
-import { fabric } from 'fabric';
+import { FabricJSEditor } from '../types';
 
 export interface ToolboxProps {
-  canvas: fabric.Canvas | null;
+  fabricJSEditor: FabricJSEditor | null;
 }

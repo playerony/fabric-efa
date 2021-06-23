@@ -4,7 +4,9 @@ import { applyStyleModifiers, ModifiersConfig } from 'styled-components-modifier
 
 import { spacing, typeScale } from '@infrastructure';
 
-export const BUTTON_MODIFIERS: ModifiersConfig = {
+import { ButtonProps } from './button.types';
+
+const BUTTON_MODIFIERS: ModifiersConfig = {
   error: ({ theme }) => `
     color: ${theme.color.textColorInverted};
     background-color: ${theme.color.errorColor};
@@ -19,7 +21,7 @@ export const BUTTON_MODIFIERS: ModifiersConfig = {
   `,
 };
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<ButtonProps>`
   ${padding(spacing.small, spacing.xmedium)}
   ${transitions('color 0.3s ease-in-out', 'background-color 0.3s ease-in-out')}
 
