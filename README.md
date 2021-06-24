@@ -85,4 +85,4 @@ You need to have installed the following software:
 ### Commit Message Guideline
 
 - For easier commit type recognition commit messages are prefixed with an emoji
-- See available [gitmoji,dev](https://gitmoji.dev/)
+- See available [gitmoji.dev](https://gitmoji.dev/)
