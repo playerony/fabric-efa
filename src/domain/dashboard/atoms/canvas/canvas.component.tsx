@@ -1,11 +1,11 @@
-import { useRef, useEffect } from 'react';
+import { memo, useRef, useEffect } from 'react';
 
 import S from './canvas.styles';
 
 import { createCanvas } from './utils';
 import { CanvasProps } from './canvas.types';
 
-export const Canvas = ({ setCanvas }: CanvasProps): JSX.Element => {
+export const Canvas = memo(({ setCanvas }: CanvasProps): JSX.Element => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -17,4 +17,4 @@ export const Canvas = ({ setCanvas }: CanvasProps): JSX.Element => {
   }, [setCanvas]);
 
   return <S.StyledCanvas ref={canvasRef} />;
-};
+});

@@ -2,7 +2,6 @@ import { fabric } from 'fabric';
 import { useState, useEffect } from 'react';
 
 import { FabricJSEditor } from '../../../types';
-
 import { bindEvents, buildEditor } from './utils';
 
 export const useFabricJsEditor = (canvas: fabric.Canvas | null): FabricJSEditor => {

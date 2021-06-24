@@ -11,12 +11,12 @@ export function createCanvas(
     return null;
   }
 
-  const width = getWindowWidth();
-  const height = getWindowHeight();
+  const windowWidth = getWindowWidth();
+  const windowHeight = getWindowHeight();
 
   return new fabric.Canvas(canvasRef.current, {
-    height,
+    height: windowHeight,
     renderOnAddRemove: true,
-    width: width * CANVAS_WIDTH_SCALE,
+    width: windowWidth * CANVAS_WIDTH_SCALE,
   });
 }

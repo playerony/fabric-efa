@@ -1,4 +1,4 @@
-import { MutableRefObject, useEffect, useRef } from 'react';
+import { useRef, useEffect, MutableRefObject } from 'react';
 
 export function useEventListener<K extends keyof WindowEventMap>(
   eventName: K,
