@@ -2,18 +2,18 @@
 
 ## 📖 Table of Contents
 
-- [💩 What is this project about?](#💩-what-is-this-project-about)
-- [🌐 Links](#🌐-links)
-- [🎨 Architecture](#🎨-architecture)
-- [✨ Getting started](#✨-getting-started)
+- [💩 What is this project about?](#user-content--what-is-this-project-about)
+- [🌐 Links](#user-content--links)
+- [🎨 Architecture](#user-content--architecture)
+- [✨ Getting started](#user-content--getting-started)
   - [Prerequisites](#prerequisites)
   - [Bootstrap](#bootstrap)
-- [📜 Scripts](#📜-scripts)
+- [📜 Scripts](#user-content--scripts)
   - [Development](#development)
   - [Build](#build)
   - [Test](#test)
   - [Analyze](#analyze)
-- [📚 Documentation](#%f0%9f%93%9a-documentation)
+- [📚 Documentation](#user-content--documentation)
   - [Commit Message Guideline](#commit-message-guideline)
 
 ## 💩 What is this project about?
