@@ -22,8 +22,8 @@ Simple editor written with react and fabricjs for education purposes.
 
 ## 🌐 Links
 
-Storybook: https://yellow-beach-0ad556203.azurestaticapps.net
-Application: https://thankful-smoke-0ce524e03.azurestaticapps.net
+- Storybook: https://yellow-beach-0ad556203.azurestaticapps.net
+- Application: https://thankful-smoke-0ce524e03.azurestaticapps.net
 
 ## 🎨 Architecture
 
