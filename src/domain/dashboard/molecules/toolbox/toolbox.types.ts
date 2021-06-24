@@ -1,4 +1,4 @@
-import { FabricJSEditor } from '../types';
+import { FabricJSEditor } from '../../types';
 
 export interface ToolboxProps {
   fabricJSEditor: FabricJSEditor | null;

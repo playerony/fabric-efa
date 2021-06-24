@@ -5,24 +5,29 @@ import { CANVAS_BUTTONS_CONTAINER_ID } from '@infrastructure';
 
 import { createButton, setButtonPosition } from '..';
 
-export function bindEvents(canvas: fabric.Canvas) {
-  const buttonWidth = 102;
-  const buttonHeight = 20;
+const BUTTON_WIDTH = 130;
+const BUTTON_HEIGHT = 30;
+
+export function bindEvents(canvas: fabric.Canvas): void {
   const canvasButtonsContainer = document.getElementById(CANVAS_BUTTONS_CONTAINER_ID);
 
-  canvas.on('object:added', (e: any) => {
-    if (!canvasButtonsContainer || !e.target) {
+  canvas.on('object:added', ({ target }: any) => {
+    if (!canvasButtonsContainer || !target) {
       return;
     }
 
-    const { id, top, left } = e.target;
-    const buttonElement = createButton(id);
+    const { id, top, left } = target;
 
-    buttonElement.style.top = `${top - buttonHeight / 2}px`;
-    buttonElement.style.left = `${left - buttonWidth / 2}px`;
+    const buttonElement = createButton({
+      id,
+      canvasElementY: top,
+      width: BUTTON_WIDTH,
+      canvasElementX: left,
+      height: BUTTON_HEIGHT,
+    });
 
     buttonElement.addEventListener('click', () => {
-      e.target.set({ fill: getRandomColor() });
+      target.set({ fill: getRandomColor() });
 
       canvas.renderAll();
     });
@@ -30,13 +35,12 @@ export function bindEvents(canvas: fabric.Canvas) {
     canvasButtonsContainer.appendChild(buttonElement);
   });
 
-  canvas.on('object:removed', (e: any) => {
-    if (!canvasButtonsContainer || !e.target) {
+  canvas.on('object:removed', ({ target }: any) => {
+    if (!canvasButtonsContainer || !target) {
       return;
     }
 
-    const { id } = e.target;
-    const foundButton = document.getElementById(id);
+    const foundButton = document.getElementById(target.id);
 
     if (foundButton) {
       foundButton.remove();
@@ -45,16 +49,28 @@ export function bindEvents(canvas: fabric.Canvas) {
 
   canvas.on(
     'object:moving',
-    setButtonPosition({ canvasButtonsContainer, buttonWidth, buttonHeight }),
+    setButtonPosition({
+      canvasButtonsContainer,
+      buttonWidth: BUTTON_WIDTH,
+      buttonHeight: BUTTON_HEIGHT,
+    }),
   );
 
   canvas.on(
     'object:scaling',
-    setButtonPosition({ canvasButtonsContainer, buttonWidth, buttonHeight }),
+    setButtonPosition({
+      canvasButtonsContainer,
+      buttonWidth: BUTTON_WIDTH,
+      buttonHeight: BUTTON_HEIGHT,
+    }),
   );
 
   canvas.on(
     'object:rotating',
-    setButtonPosition({ canvasButtonsContainer, buttonWidth, buttonHeight }),
+    setButtonPosition({
+      canvasButtonsContainer,
+      buttonWidth: BUTTON_WIDTH,
+      buttonHeight: BUTTON_HEIGHT,
+    }),
   );
 }

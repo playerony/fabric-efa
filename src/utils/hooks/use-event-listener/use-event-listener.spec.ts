@@ -12,7 +12,7 @@ const mockElement = {
   removeEventListener: () => {
     hackHandler = null;
   },
-  dispatchEvent: (event: any) => {
+  dispatchEvent: (event: typeof mouseMoveEvent) => {
     if (hackHandler) {
       hackHandler(event);
     }
