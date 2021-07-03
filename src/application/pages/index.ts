@@ -1,1 +1,2 @@
-export * from './dashboard-page/dashboard-page.component';
+export * from './error';
+export * from './content';

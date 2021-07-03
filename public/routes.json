@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "defaultHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
+  "platformErrorOverrides": [{ "errorType": "NotFound", "serve": "/404" }],
+  "mimeTypes": {
+    "custom": "text/html"
+  }
+}
