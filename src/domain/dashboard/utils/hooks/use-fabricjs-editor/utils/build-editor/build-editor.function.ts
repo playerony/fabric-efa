@@ -1,10 +1,9 @@
 import { uuid } from 'uuidv4';
 import { fabric } from 'fabric';
 
+import { getRandomColor } from '@utils';
 import { EditorOptions } from '../../../../../types';
 import { CIRCLE, RECTANGLE, TRIANGLE } from './build-editor.defaults';
-
-import { getRandomColor } from '@utils';
 
 const generateUniqueId = (prefix: string): string => `${prefix}_${uuid()}`;
 

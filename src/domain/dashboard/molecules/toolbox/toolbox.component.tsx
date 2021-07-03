@@ -1,6 +1,6 @@
+import { Button } from '@ui';
 import { ToolboxProps } from './toolbox.types';
 
-import { Button } from '@ui';
 import S from './toolbox.styles';
 
 import { callEditorFunction } from './utils';

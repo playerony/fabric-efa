@@ -1,7 +1,7 @@
 import { fabric } from 'fabric';
 
-import { renderTriangle } from '..';
 import { degreesToRadians } from '@utils';
+import { renderTriangle } from '..';
 
 const { controlsUtils } = fabric as any;
 

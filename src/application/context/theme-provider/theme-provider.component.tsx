@@ -1,7 +1,7 @@
 import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 
-import { ThemeProviderProps } from './theme-provider.types';
 import { defaultTheme, ResetStyles, GlobalStyles } from '@infrastructure';
+import { ThemeProviderProps } from './theme-provider.types';
 
 export const ThemeProvider = ({ children }: ThemeProviderProps): JSX.Element => (
   <StyledThemeProvider theme={defaultTheme}>

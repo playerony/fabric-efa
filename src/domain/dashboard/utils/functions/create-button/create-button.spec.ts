@@ -1,5 +1,5 @@
-import { createButton } from './create-button.function';
 import { functionImportTest, toMatchSnapshot } from '@utils';
+import { createButton } from './create-button.function';
 
 function createSnapshotTestMock() {
   const width = 100;

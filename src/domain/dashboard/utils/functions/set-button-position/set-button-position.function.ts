@@ -1,6 +1,5 @@
-import { Input } from './set-button-position.types';
-
 import { degreesToRadians } from '@utils';
+import { Input } from './set-button-position.types';
 
 function setButtonPositionForSelectedObject(
   { id, angle }: any,

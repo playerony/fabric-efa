@@ -1,8 +1,9 @@
 # 🙈 fabric-efa 🙈
 
+Simple editor written with react and fabricjs for education purposes.
+
 ## 📖 Table of Contents
 
-- [💩 What is this project about?](#user-content--what-is-this-project-about)
 - [🌐 Links](#user-content--links)
 - [🎨 Architecture](#user-content--architecture)
 - [✨ Getting started](#user-content--getting-started)
@@ -15,10 +16,6 @@
   - [Analyze](#analyze)
 - [📚 Documentation](#user-content--documentation)
   - [Commit Message Guideline](#commit-message-guideline)
-
-## 💩 What is this project about?
-
-Simple editor written with react and fabricjs for education purposes.
 
 ## 🌐 Links
 

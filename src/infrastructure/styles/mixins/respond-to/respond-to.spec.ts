@@ -1,6 +1,5 @@
-import { respondToMin, respondToMax } from './respond-to.mixin';
-
 import { toMatchSnapshot, functionImportTest } from '@utils';
+import { respondToMin, respondToMax } from './respond-to.mixin';
 
 describe('respondToMin mixin', () => {
   functionImportTest(respondToMin.large);
