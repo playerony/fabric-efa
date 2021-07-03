@@ -68,6 +68,7 @@ You need to have installed the following software:
 - `test:ci` - Run tests in CI mode.
 - `test:watch` - Run tests in watch mode.
 - `test:coverage` - Run tests in coverage mode.
+- `test:update-snapshot`: Run tests and update all snapshots.
 
 ### Analyze
 

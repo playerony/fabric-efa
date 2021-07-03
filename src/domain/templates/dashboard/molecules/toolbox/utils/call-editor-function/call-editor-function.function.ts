@@ -1,4 +1,4 @@
-import { EditorOptions, FabricJSEditor } from '@domain/dashboard/types';
+import { EditorOptions, FabricJSEditor } from '@domain';
 
 import { isFunction } from '@utils';
 

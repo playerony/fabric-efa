@@ -1,1 +1,2 @@
-export * from './dashboard/dashboard.component';
+export * from './molecules';
+export * from './templates';

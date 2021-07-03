@@ -1,11 +1,11 @@
 import { AppProvider } from '../context';
-import { DashboardPage } from '../pages';
 import { PrimaryBackground } from '../layout';
+import { Routing } from '../routing/routing.component';
 
 export const App = (): JSX.Element => (
   <AppProvider>
     <PrimaryBackground>
-      <DashboardPage />
+      <Routing />
     </PrimaryBackground>
   </AppProvider>
 );
