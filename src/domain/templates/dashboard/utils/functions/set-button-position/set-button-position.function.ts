@@ -20,7 +20,7 @@ function setButtonsPositionsForMultipleSelectedObjects(
   centerX: number,
   centerY: number,
 ): void {
-  const radius = degreesToRadians(angle);
+  const radius = degreesToRadians(angle) || 0;
 
   objects.forEach((_object: any) => {
     const objectId = _object.id;

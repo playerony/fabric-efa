@@ -2,7 +2,7 @@ import { fabric } from 'fabric';
 import { useState, useEffect, ReactNode } from 'react';
 
 import { getWindowWidth, getWindowHeight, useDebounce, useEventListener } from '@utils';
-import { CANVAS_WIDTH_SCALE, CANVAS_BUTTONS_CONTAINER_ID } from '@infrastructure';
+import { CANVAS_BUTTONS_CONTAINER_ID } from '@infrastructure';
 import { Canvas } from './atoms';
 import { Toolbox, LoadingPage } from './molecules';
 
@@ -28,8 +28,8 @@ export const Dashboard = (): JSX.Element => {
     const width = getWindowWidth();
     const height = getWindowHeight();
 
+    canvas.setWidth(width);
     canvas.setHeight(height);
-    canvas.setWidth(width * CANVAS_WIDTH_SCALE);
   });
 
   function renderContent(): ReactNode {

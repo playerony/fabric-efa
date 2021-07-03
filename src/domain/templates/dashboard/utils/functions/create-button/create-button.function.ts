@@ -19,7 +19,7 @@ export function createButton({
   buttonElement.id = id;
   buttonElement.innerText = 'Change color';
 
-  buttonElement.style.zIndex = '2000';
+  buttonElement.style.zIndex = '25';
   buttonElement.style.cursor = 'pointer';
   buttonElement.style.position = 'absolute';
   buttonElement.style.textTransform = 'uppercase';

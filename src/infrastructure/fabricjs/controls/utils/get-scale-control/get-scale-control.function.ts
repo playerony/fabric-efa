@@ -8,7 +8,7 @@ const { controlsUtils } = fabric as any;
 export const getScaleControl = (options: Partial<fabric.Control> = {}): fabric.Control => {
   const { angle = 0, ...restOptions } = options;
 
-  const radians = degreesToRadians(angle);
+  const radians = degreesToRadians(angle) || 0;
 
   return new fabric.Control({
     y: 0.5,
