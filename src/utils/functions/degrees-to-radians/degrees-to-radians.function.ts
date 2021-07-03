@@ -1,8 +1,8 @@
 import { isNumber } from '@utils';
 
-export function degreesToRadians(degrees: number): number {
+export function degreesToRadians(degrees: number): number | null {
   if (!isNumber(degrees)) {
-    throw new Error('parameter is not a number');
+    return null;
   }
 
   return degrees * (Math.PI / 180);

@@ -3,20 +3,18 @@ import { degreesToRadians, functionImportTest } from '@utils';
 describe('degreesToRadians Function', () => {
   functionImportTest(degreesToRadians);
 
-  it('should throw an error when the passed value is not a number', () => {
-    const expectedErrorMessage = 'parameter is not a number';
+  it('should return null when the passed value is not a number', () => {
+    // @ts-ignore
+    expect(degreesToRadians(null)).toBeNull();
 
     // @ts-ignore
-    expect(() => degreesToRadians(null)).toThrow(expectedErrorMessage);
+    expect(degreesToRadians(undefined)).toBeNull();
 
     // @ts-ignore
-    expect(() => degreesToRadians(undefined)).toThrow(expectedErrorMessage);
+    expect(degreesToRadians(() => {})).toBeNull();
 
     // @ts-ignore
-    expect(() => degreesToRadians(() => {})).toThrow(expectedErrorMessage);
-
-    // @ts-ignore
-    expect(() => degreesToRadians([])).toThrow(expectedErrorMessage);
+    expect(degreesToRadians([])).toBeNull();
   });
 
   it('should convert degrees to radians', () => {

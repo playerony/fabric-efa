@@ -1,7 +1,6 @@
 import { fabric } from 'fabric';
 import { MutableRefObject } from 'react';
 
-import { CANVAS_WIDTH_SCALE } from '@infrastructure';
 import { getWindowWidth, getWindowHeight } from '@utils';
 
 export function createCanvas(
@@ -15,8 +14,8 @@ export function createCanvas(
   const windowHeight = getWindowHeight();
 
   return new fabric.Canvas(canvasRef.current, {
+    width: windowWidth,
     height: windowHeight,
     renderOnAddRemove: true,
-    width: windowWidth * CANVAS_WIDTH_SCALE,
   });
 }
