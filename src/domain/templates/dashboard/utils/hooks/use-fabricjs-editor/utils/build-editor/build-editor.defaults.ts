@@ -1,6 +1,6 @@
 import { yellow, neutral } from '@infrastructure';
 
-export const DEFAULT_SIZE = 300;
+export const DEFAULT_SIZE = 150;
 export const DEFAULT_FILL_COLOR = yellow[100];
 export const DEFAULT_STROKE_COLOR = neutral[600];
 

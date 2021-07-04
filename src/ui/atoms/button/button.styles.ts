@@ -2,9 +2,9 @@ import styled from 'styled-components';
 import { padding, transitions } from 'polished';
 import { applyStyleModifiers, ModifiersConfig } from 'styled-components-modifiers';
 
-import { spacing, typeScale } from '@infrastructure';
-
 import { ButtonProps } from './button.types';
+
+import { spacing, typeScale, respondToMax } from '@infrastructure';
 
 const BUTTON_MODIFIERS: ModifiersConfig = {
   error: ({ theme }) => `
@@ -52,7 +52,13 @@ const StyledButton = styled.button<ButtonProps>`
     background-color: ${({ theme }) => theme.color.disabled};
   }
 
-  ${applyStyleModifiers(BUTTON_MODIFIERS) as any}
+  ${respondToMax.xmobile`
+    ${padding(spacing.xsmall, spacing.small)}
+
+    font-size: ${typeScale.helperText};
+  `}
+
+  ${applyStyleModifiers(BUTTON_MODIFIERS)}
 `;
 
 const S = {

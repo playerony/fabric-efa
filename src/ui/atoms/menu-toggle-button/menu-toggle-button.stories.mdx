@@ -1,0 +1,20 @@
+import { boolean } from '@storybook/addon-knobs';
+import { action } from '@storybook/addon-actions';
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+
+import { MenuToggleButton } from '@ui';
+
+<Meta title="Design System/atoms/MenuToggleButton" component={MenuToggleButton} />
+
+# MenuToggleButton
+
+MenuToggleButton is used to trigger an open sidebar menu operation.
+
+<Preview withToolbar>
+  <Story name="default">
+    <MenuToggleButton
+      isActive={boolean('isActive', false)}
+      onClick={action('menu-toggle-button-click')}
+    />
+  </Story>
+</Preview>

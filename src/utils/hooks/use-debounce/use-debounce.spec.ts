@@ -6,7 +6,7 @@ describe('useDebounce Hook', () => {
   functionImportTest(useDebounce);
 
   it('should return updated value after some time', async () => {
-    const { result, rerender, waitFor } = renderHook((value: string) => useDebounce(value, 300), {
+    const { result, waitFor, rerender } = renderHook((value: string) => useDebounce(value, 300), {
       initialProps: 'base phrase',
     });
 

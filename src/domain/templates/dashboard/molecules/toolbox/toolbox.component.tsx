@@ -1,11 +1,15 @@
+import { useState } from 'react';
+
 import { Button } from '@ui';
-import { ToolboxProps } from './toolbox.types';
 
 import S from './toolbox.styles';
 
 import { callEditorFunction } from './utils';
+import { ToolboxProps } from './toolbox.types';
 
 export const Toolbox = ({ fabricJSEditor }: ToolboxProps): JSX.Element => {
+  const [isToolboxVisible, setIsToolboxVisible] = useState<boolean>(true);
+
   const addCircle = () => callEditorFunction(fabricJSEditor, 'addCircle');
 
   const deleteAll = () => callEditorFunction(fabricJSEditor, 'deleteAll');
@@ -16,20 +20,31 @@ export const Toolbox = ({ fabricJSEditor }: ToolboxProps): JSX.Element => {
 
   const deleteSelected = () => callEditorFunction(fabricJSEditor, 'deleteSelected');
 
+  const onMenuToggleButtonClick = () => setIsToolboxVisible((prev) => !prev);
+
   return (
-    <S.StyledWrapper>
-      <S.StyledHeading>Toolbox</S.StyledHeading>
-      <S.StyledButtonsWrapper>
-        <Button onClick={addCircle}>Add Circle</Button>
-        <Button onClick={addRectangle}>Add Rectangle</Button>
-        <Button onClick={addTriangle}>Add Triangle</Button>
-        <Button modifiers={['error']} onClick={deleteAll}>
-          Delete All
-        </Button>
-        <Button modifiers={['error']} onClick={deleteSelected}>
-          Delete Selected
-        </Button>
-      </S.StyledButtonsWrapper>
-    </S.StyledWrapper>
+    <>
+      <S.StyledMenuToggleButton isActive={isToolboxVisible} onClick={onMenuToggleButtonClick} />
+      <S.StyledWrapper isOpen={isToolboxVisible}>
+        <S.StyledHeading>Toolbox</S.StyledHeading>
+        <S.StyledButtonsWrapper>
+          <Button onClick={addCircle} disabled={!isToolboxVisible}>
+            Add Circle
+          </Button>
+          <Button onClick={addRectangle} disabled={!isToolboxVisible}>
+            Add Rectangle
+          </Button>
+          <Button onClick={addTriangle} disabled={!isToolboxVisible}>
+            Add Triangle
+          </Button>
+          <Button modifiers={['error']} onClick={deleteAll} disabled={!isToolboxVisible}>
+            Delete All
+          </Button>
+          <Button modifiers={['error']} onClick={deleteSelected} disabled={!isToolboxVisible}>
+            Delete Selected
+          </Button>
+        </S.StyledButtonsWrapper>
+      </S.StyledWrapper>
+    </>
   );
 };
