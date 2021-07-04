@@ -1,11 +1,11 @@
 import { useState } from 'react';
 
 import { Button } from '@ui';
-import { ToolboxProps } from './toolbox.types';
 
 import S from './toolbox.styles';
 
 import { callEditorFunction } from './utils';
+import { ToolboxProps } from './toolbox.types';
 
 export const Toolbox = ({ fabricJSEditor }: ToolboxProps): JSX.Element => {
   const [isToolboxVisible, setIsToolboxVisible] = useState<boolean>(true);
