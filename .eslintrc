@@ -31,6 +31,7 @@
         "import/prefer-default-export": "off",
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/no-use-before-define": "off",
+        "import/order": "off",
         "consistent-return": "off",
         "operator-linebreak": "off",
         "no-underscore-dangle": "off",
