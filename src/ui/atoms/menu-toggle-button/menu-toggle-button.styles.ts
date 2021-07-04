@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 import { size, cover, transitions } from 'polished';
 
-import { radius } from '@infrastructure';
-
 import { StyledCenterLineProps } from './menu-toggle-button.types';
+
+import { radius } from '@infrastructure';
 
 const LINE_HEIGHT = 4;
 const WRAPPER_SIZE = 30;
